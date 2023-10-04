@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registration</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='cropstyle.css') }}">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css%22%3E">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+
+               <li> <a class="nav-link active" href="#">HOME</a></li>
+                &nbsp;
+
+
+                <li><a class="nav-link active" aria-current="page" href="#" >COMMUNITY</a></li>
+                &nbsp;
+
+
+                <li><a class="nav-link active" aria-current="page" href="#">ABOUT US</a></li>
+                &nbsp;
+
+            </ul>
+        </div>
+    </nav>
+    <div class="heading">
+       CROP RECOMMENDATION
+    </div>
+    <div class="details">
+    Enter the whether conditions:
+    </div>
+    <form action="/recommendation" method="POST">
+        
+        <br>
+        <div>
+            <label for="rain" style="margin-bottom: 10px;">Rainfall:</label>
+            <select id="rain" name="rain">
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+              
+            </select>
+    </div>
+    <br>
+    <div>
+        <label for="humid" style="margin-bottom: 10px;">Humidity:</label>
+            <select id="humid" name="humid">
+              <option value="high">High</option>
+              <option value="medium">Medium</option>
+              <option value="low">Low</option>
+              </select>
+    </div>
+       
+        
+</br>
+        <div>
+            <label for="temp" style="margin-bottom: 10px;">Temperature:</label>
+                <select id="temp" name="temp">
+                  <option value="high">High</option>
+                  <option value="medium">Medium</option>
+                  <option value="low">Low</option>
+                  </select>
+        </div>
+        <br>
+        <div>
+            <input type="submit" value="Submit Now">
+            <input type="reset" value="Reset Now">
+        </div>
+        
+    </form>
+    
+    
+</body>
+</html>

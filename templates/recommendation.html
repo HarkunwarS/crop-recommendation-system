@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,700" rel="stylesheet">
+	<title>Crop Recommendation</title>
+	<style>
+        body {
+            background-image: url({{ url_for('static', filename='farm.jpg') }});
+        }
+        
+		h1 {
+			font-family: 'Montserrat', sans-serif;
+			font-size: 40px;
+			text-align: center;
+            color: #fff;
+		}
+		p {
+			font-family: 'Open Sans', sans-serif;
+			font-size: 2em;
+			text-align: center;
+            color: #fff;
+		}
+	</style>
+</head>
+<body>
+	<h1>Crop Recommendation:</h1>
+	<p>The recommended crop is {{ crop }}</p>
+</body>
+</html>
